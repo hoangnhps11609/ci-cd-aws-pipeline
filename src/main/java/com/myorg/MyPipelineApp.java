@@ -19,8 +19,8 @@ public class MyPipelineApp {
                 // and Region that are implied by the current CLI configuration.
                 
                 .env(Environment.builder()
-                        .account(System.getenv("CDK_DEFAULT_ACCOUNT"))
-                        .region(System.getenv("CDK_DEFAULT_REGION"))
+                        .account("030245542280")
+                        .region("ap-southeast-1")
                         .build())
                 
 
