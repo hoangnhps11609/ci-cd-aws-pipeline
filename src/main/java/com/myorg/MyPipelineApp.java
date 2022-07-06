@@ -8,7 +8,7 @@ public class MyPipelineApp {
     public static void main(final String[] args) {
         App app = new App();
 
-        new MyPipelineStack(app, "PipelineStack", StackProps.builder()
+        new MyPipelineStack(app, "PipelineStackVer2", StackProps.builder()
             .env(Environment.builder()
                 .account("030245542280")
                 .region("us-east-1")
