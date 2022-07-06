@@ -1,5 +1,6 @@
 package com.myorg;
 
+import java.util.Arrays;
 import software.constructs.Construct;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
@@ -28,7 +29,7 @@ public class MyPipelineStack extends Stack {
         CodePipeline pipeline = CodePipeline.Builder.create(this, "pipeline")
              .pipelineName("MyPipeline")
              .synth(ShellStep.Builder.create("Synth")
-                .input(CodePipelineSource.gitHub("https://github.com/hoangnhps11609/ci-cd-aws-pipeline.git", "main"))
+                .input(CodePipelineSource.gitHub("hoangnhps11609/ci-cd-aws-pipeline", "main"))
                 .commands(Arrays.asList("npm install -g aws-cdk", "cdk synth"))
                 .build())
              .build();
