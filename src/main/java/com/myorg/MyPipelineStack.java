@@ -43,7 +43,7 @@ public class MyPipelineStack extends Stack {
         
         stage.addPost(ShellStep.Builder.create("validate")
             .input(synth)
-            .commands(Arrays.asList("sh ./tests/validate.sh"))
+            .commands(Arrays.asList("node ./tests/validate.js"))
             .build());
     }
 }
