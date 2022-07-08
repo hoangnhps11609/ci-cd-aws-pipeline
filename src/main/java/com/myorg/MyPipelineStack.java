@@ -9,7 +9,6 @@ import software.amazon.awscdk.StageProps;
 import software.amazon.awscdk.pipelines.CodePipeline;
 import software.amazon.awscdk.pipelines.CodePipelineSource;
 import software.amazon.awscdk.pipelines.ShellStep;
-import software.amazon.awscdk.pipelines.StackDeployment;
 import software.amazon.awscdk.pipelines.StageDeployment;
 
 public class MyPipelineStack extends Stack {
@@ -43,7 +42,7 @@ public class MyPipelineStack extends Stack {
 
         
         stage.addPost(ShellStep.Builder.create("validate")
-            .input(synth)
+            .input(source)
             .commands(Arrays.asList("sh ./tests/validate.sh"))
             .build());
     }
